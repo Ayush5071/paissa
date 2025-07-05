@@ -8,7 +8,7 @@ import { useTheme } from '@/contexts/ThemeContext'
 
 const navItems = [
   { name: 'Home', href: '/', icon: <Home className="w-4 h-4" /> },
-  { name: 'Tracking', href: '/tracking', icon: <BarChart3 className="w-4 h-4" /> },
+  { name: 'Dashboard', href: '/dashboard', icon: <BarChart3 className="w-4 h-4" /> },
   { name: 'Budgets', href: '/budgets', icon: <Target className="w-4 h-4" /> },
   { name: 'About', href: '/about', icon: <Info className="w-4 h-4" /> },
 ]

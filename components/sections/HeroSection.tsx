@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { DollarSign, TrendingUp, PieChart, Target } from 'lucide-react'
 import { useTheme } from '@/contexts/ThemeContext'
+import Link from 'next/link'
 
 export default function HeroSection() {
   const { theme } = useTheme()
@@ -90,14 +91,16 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
         >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3 text-lg"
-          >
-            <DollarSign className="w-6 h-6" />
-            Start Tracking
-          </motion.button>
+          <Link href="/dashboard">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3 text-lg"
+            >
+              <DollarSign className="w-6 h-6" />
+              Start Tracking
+            </motion.button>
+          </Link>
           
           <motion.button
             whileHover={{ scale: 1.05 }}
