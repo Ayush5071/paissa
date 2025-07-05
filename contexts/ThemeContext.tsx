@@ -42,10 +42,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     setTheme(prev => prev === 'light' ? 'dark' : 'light')
   }
 
-  if (!mounted) {
-    return null
-  }
-
+  // Always render the provider, but use a default theme during SSR
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
